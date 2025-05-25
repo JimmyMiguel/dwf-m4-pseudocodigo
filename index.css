@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    min-height: 100vh;
+    background-color: white;
+    overflow-x: hidden;
+
+}
+
+
+.faq {
+    width: 100%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+}
+
+@media (min-width:960px) {
+    .faq {
+        flex-direction: row;
+    }
+}
+
+.faq-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+}
+
+@media (min-width:960px) {
+    .faq-list {
+        margin: 0;
+    }
+}
+
+.faq>h2 {
+    font-family: 'roboto';
+    font-size: 38px;
+    width: 312px;
+    height: 90px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.faq-item {
+    margin-bottom: 14px;
+    width: 333px;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+
+.faq-item-title {
+    width: 312px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.faq-item-title>a {
+    text-decoration: none;
+    display: inline;
+    color: black;
+}
+
+.faq-item-title>a::before {
+    content: '>';
+    color: #FF6262;
+
+}
+
+.faq-item-text {
+    width: 279px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 32px;
+    display: none;
+}
+
+@media (min-width:960px) {
+    .faq-item-text {
+        width: 578px;
+    }
+}
+
+
+.faq-item-title:active+.faq-item-text {
+    display: block;
+
+
+}
