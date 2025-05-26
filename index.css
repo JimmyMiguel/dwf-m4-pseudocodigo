@@ -25,8 +25,9 @@ body {
     }
 }
 
+
 .faq-list {
-    width: 100%;
+    max-width: 960px;
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -56,6 +57,12 @@ body {
     list-style-type: none;
 }
 
+@media (min-width:960px) {
+    .faq-item {
+        width: 100%;
+    }
+}
+
 
 .faq-item-title {
     width: 312px;
@@ -78,7 +85,6 @@ body {
 }
 
 .faq-item-text {
-    width: 279px;
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 20px;
@@ -88,13 +94,12 @@ body {
 
 @media (min-width:960px) {
     .faq-item-text {
-        width: 578px;
+        width: 100%;
     }
 }
 
 
-.faq-item-title:active+.faq-item-text {
+.faq-item:target .faq-item-text {
     display: block;
-
 
 }
